@@ -3,7 +3,7 @@
 
   const $ = (id) => document.getElementById(id);
   const canvas = $("canvas");
-  const buildDir = "https://file.garden/asy6vDb52DdhXNvl/";
+  const buildDir = "st/";
 
   function log(line, isError) {
     (isError ? console.warn : console.log)(line);
