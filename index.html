@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Worldcraft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Worldcraft</h1>
+
+    <div class="stage" id="stage">
+      <canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas>
+
+      <div class="overlay" id="start">
+        <button id="play">Play</button>
+      </div>
+
+      <div class="overlay hidden" id="loading">
+         <p id="loading-text">Loading...</p>
+        <div class="bar"><div class="fill" id="loading-fill"></div></div>
+      </div>
+
+      <div class="overlay hidden" id="ended">
+        <div class="panel">
+          <p id="ended-title">Game closed</p>
+          <p id="ended-text"></p>
+          <p class="actions"><button id="again">Restart</button></p>
+        </div>
+      </div>
+    </div>
+
+    <button id="fullscreen">Fullscreen</button>
+    <button id="new-world">New world</button>
+    <label class="pack hidden" id="pack-label">Texture pack
+      <select id="texture-pack"><option value="">None</option></select>
+    </label>
+
+    <div class="info">
+    <section>
+    <h2>Controls</h2>
+    <table class="keys">
+      <tr><td>WASD, mouse</td><td>Move, look</td></tr>
+      <tr><td>Space</td><td>Jump</td></tr>
+      <tr><td>Shift</td><td>Crouch</td></tr>
+      <tr><td>Left click</td><td>Hit</td></tr>
+      <tr><td>Right click</td><td>Use / place</td></tr>
+      <tr><td>Number keys / mouse wheel</td><td>Select hotbar slot</td></tr>
+      <tr><td>E</td><td>Inventory</td></tr>
+      <tr><td>Q</td><td>Throw item</td></tr>
+      <tr><td>K</td><td>Fly toggle</td></tr>
+      <tr><td>T</td><td>Command line (/help)</td></tr>
+      <tr><td>F2</td><td>Screenshot</td></tr>
+      <tr><td>F3</td><td>Debug overlay</td></tr>
+      <tr><td>F11</td><td>Isometric screenshot</td></tr>
+      <tr><td>Esc</td><td>Pause</td></tr>
+    </table>
+
+    <h2>Screenshots</h2>
+    <div class="shots" id="screenshots"></div>
+    </section>
+
+    <section class="changelog hidden" id="changelog-section">
+      <h2>Changelog</h2>
+      <div id="changelog"></div>
+    </section>
+    </div>
+
+
+  <script src="version.js" onerror="void 0"></script>
+  <script src="main.js"></script>
+</body>
+</html>
